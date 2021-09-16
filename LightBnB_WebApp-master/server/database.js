@@ -65,6 +65,8 @@ exports.addUser = addUser;
  * @return {Promise<[{}]>} A promise to the reservations.
  */
 const getAllReservations = function(guest_id, limit = 10) {
+  // Update the getAllReservations function 
+  // to use the lightbnb database with SQL queries.
   return pool.query(`
   SELECT reservations.*, properties.*, AVG(property_reviews.rating)
   FROM users
